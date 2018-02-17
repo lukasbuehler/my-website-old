@@ -22,7 +22,7 @@ if ($result->num_rows > 0) {
     // output data of each row
     echo "Found some rows yay";
 
-    while($row = mysql_fetch_assoc($result)) {
+    while($row = $result->fetch_assoc()) {
         $rows[] = $row;
     }
     echo json_encode($rows);
