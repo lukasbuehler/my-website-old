@@ -15,6 +15,7 @@ if ($conn->connect_error) {
 }
 
 $sql = 'SELECT * FROM `cards`';
+$rows = array();
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -22,9 +23,9 @@ if ($result->num_rows > 0) {
     echo "Found some rows yay";
 
     while($row = $result->fetch_assoc()) {
-        echo "id: " . $row["id"]. " - Title: " . $row["title"] . "<br>";
+        $rows[] = $row;
     }
-    echo html_entity_decode(json_encode($to_encode));
+    echo json_encode($rows);
 
 } else {
     echo "{error: '0 results'}";
