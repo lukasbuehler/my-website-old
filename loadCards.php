@@ -1,8 +1,12 @@
 <?php
-$servername = "localhost:3306";
+header('Content-type: application/json');
+
+$servername = "lukasbuehler.ch:3306";
 $username = "web";
 $password = "hello_friend";
 $dbname = "Cards";
+
+echo "Hi JS";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -20,7 +24,8 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         $to_encode[] = $row;
     }
-    echo json_encode($to_encode);
+
+    echo html_entity_decode(json_encode($to_encode));
 
 } else {
     echo "0 results";
