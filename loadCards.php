@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost";
+$servername = "localhost:3306";
 $username = "web";
 $password = "hello_friend";
 $dbname = "Cards";
@@ -11,7 +11,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = 'SELECT TOP 3 * FROM cards /*WHERE expiration_date=NULL*/ ORDER BY visible_date;';
+$sql = 'SELECT * FROM `cards`';
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
