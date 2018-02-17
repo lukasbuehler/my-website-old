@@ -1,5 +1,5 @@
 <?php
-
+header('Content-type: application/json');
 
 $servername = "lukasbuehler.ch:3306";
 $username = "web";
@@ -10,7 +10,7 @@ $dbname = "Cards";
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die("{error: 'Connection failed: " . $conn->connect_error+"'}");
 }
 
 $sql = 'SELECT * FROM `cards`';
@@ -22,11 +22,11 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         $to_encode[] = $row;
     }
-    header('Content-type: application/json');
+    
     echo html_entity_decode(json_encode($to_encode));
 
 } else {
-    echo "0 results";
+    echo "{error: '0 results'}";
 }
 $conn->close();
 ?>
