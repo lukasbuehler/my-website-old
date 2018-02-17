@@ -25,10 +25,13 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         $rows[] = $row;
     }
-    echo json_encode($rows);
+    
 
 } else {
     echo "{error: '0 results'}";
 }
-$conn->close();
+
+echo json_encode($rows);
+
+
 ?>
