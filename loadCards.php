@@ -23,16 +23,13 @@ if ($result->num_rows > 0) {
     echo "Found some rows yay";
 
     while($row = $result->fetch_assoc()) {
-        echo json_encode($row);
-        $rows[] = $row;
+        array_push($rows, json_encode($row));
     }
-    
+
+    echo $rows;
 
 } else {
     echo "{error: '0 results'}";
 }
-
-echo json_encode($rows);
-
 
 ?>
