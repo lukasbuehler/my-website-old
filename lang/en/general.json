@@ -1,0 +1,25 @@
+{
+    "navbar": 
+    {
+        "about": "About Me",
+        "development": "Development",
+        "social_media": "Social Media",
+        "contact": "Contact"
+    },
+    "buttons":
+    {
+        "read_more": "Read more"
+    },
+    "cards":
+    {
+        "states": 
+        {
+            "in_planning": "In planning",
+            "in_development": "In development",
+            "download": "Download here",
+            "visit": "Visit page",
+            "new_version": "Version {{version}} available!",
+            "watch_now": "Watch now!"
+        }
+    }
+}
