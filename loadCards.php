@@ -19,9 +19,10 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
+    echo "Found some rows yay";
     $to_encode = array();
     while($row = $result->fetch_assoc()) {
-        $to_encode[] = $row;
+        array_push($to_encode, $row);
     }
     
     echo html_entity_decode(json_encode($to_encode));
