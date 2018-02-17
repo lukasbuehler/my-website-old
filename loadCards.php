@@ -23,7 +23,7 @@ if ($result->num_rows > 0) {
     echo "Found some rows yay";
 
     while($row = $result->fetch_assoc()) {
-        echo $row['title'];
+        echo json_encode($row);
         $rows[] = $row;
     }
     
