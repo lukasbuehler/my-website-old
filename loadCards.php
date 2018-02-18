@@ -26,7 +26,7 @@ if ($result->num_rows > 0) {
         array_push($rows, json_encode($row));
     }
 
-    echo $rows;
+    echo "Array: " . json_encode($rows);
 
 } else {
     echo "{error: '0 results'}";
