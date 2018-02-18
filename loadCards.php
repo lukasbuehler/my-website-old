@@ -14,7 +14,7 @@ if ($conn->connect_error) {
     die("{error: 'Connection failed: " . $conn->connect_error+"'}");
 }
 
-$sql = 'SELECT * FROM `cards`';
+$sql = 'SELECT * FROM cards';
 $rows = array();
 $result = $conn->query($sql);
 
@@ -25,7 +25,7 @@ if ($result->num_rows > 0) {
         array_push($rows, json_encode($row));
     }
 
-    echo "{" . join(",", $rows) . "}";
+    echo "[" . join(",", $rows) . "]";
 
 } else {
     echo "{error: '0 results'}";
