@@ -20,13 +20,12 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
-    echo "Found some rows yay";
 
     while($row = $result->fetch_assoc()) {
         array_push($rows, json_encode($row));
     }
 
-    echo "Array: " . json_encode($rows);
+    echo json_encode($rows);
 
 } else {
     echo "{error: '0 results'}";
