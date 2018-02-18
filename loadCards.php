@@ -22,7 +22,7 @@ if ($result->num_rows > 0) {
     // output data of each row
 
     while($row = $result->fetch_assoc()) {
-        array_push($rows, json_encode($row));
+        array_push($rows, $row);
     }
 
     echo json_encode($rows);
