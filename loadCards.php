@@ -1,5 +1,5 @@
 <?php
-header('Content-type: application/json');
+header('Content-type: application/json; charset=utf-8');
 header("Access-Control-Allow-Origin: *");
 
 $servername = "lukasbuehler.ch:3306";
