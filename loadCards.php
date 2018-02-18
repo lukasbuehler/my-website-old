@@ -25,7 +25,7 @@ if ($result->num_rows > 0) {
         array_push($rows, json_encode($row));
     }
 
-    echo json_encode($rows);
+    echo "{" . join(",", $rows) . "}";
 
 } else {
     echo "{error: '0 results'}";
