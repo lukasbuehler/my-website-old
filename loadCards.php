@@ -25,7 +25,7 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         $rows[] = json_encode($row);
     }
-    array_pop($rows); // Needed to remove out of row "false" output from fetch_assoc()
+    //array_pop($rows); // Needed to remove out of row "false" output from fetch_assoc()
 
     echo "[" . join(",", $rows) . "]";
 
