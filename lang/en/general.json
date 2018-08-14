@@ -1,25 +1,41 @@
 {
     "navbar": 
     {
-        "about": "About Me",
+        "about_me": "About Me",
         "development": "Development",
         "social_media": "Social Media",
         "contact": "Contact"
     },
-    "buttons":
+    "footer":
     {
-        "read_more": "Read more"
+        "back_to_top": "Back to the top",
+        "made_by": "made by Lukas Bühler"
     },
-    "cards":
+    "cards": 
     {
-        "states": 
+        "states":
         {
             "in_planning": "In planning",
             "in_development": "In development",
             "download": "Download here",
             "visit": "Visit page",
-            "new_version": "Version {{version}} available!",
+            "new_version": "Version {{version}} now available!",
             "watch_now": "Watch now!"
         }
+    },
+    "name": 
+    {
+        "full": "Lukas Buehler",
+        "short": "L. Buehler",
+        "initials": "LB"
+    },
+    "button":
+    {
+        "read_more": "Read more",
+        "visit": "Visit"
+    },
+    "other":
+    {
+        
     }
 }

@@ -53,7 +53,8 @@ h4 {
   padding: 5%;
   border: none;
   height: 400px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  overflow: hidden; }
   .card-view img {
     margin-bottom: 15px;
     max-width: 90%;
@@ -66,17 +67,17 @@ h4 {
 .shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 
-img.ios-app-icon {
+img.ios-app-icon, .card-view img.app {
   border-radius: 20%; }
 
-div.icon-links {
+div.large-icons {
   font-size: 32px; }
-  div.icon-links a {
+  div.large-icons a {
     color: inherit;
     margin: 5px; }
-  div.icon-links a:hover {
+  div.large-icons a:hover {
     color: #00dd00; }
-  div.icon-links a:active {
+  div.large-icons a:active {
     color: #3c91e6; }
 
 .social-media-box, .social-media-box > * {
@@ -86,7 +87,7 @@ div.icon-links {
   .social-media-box iframe, .social-media-box > * iframe {
     max-width: 100% !important;
     max-height: 100%;
-    width: auto !important;
+    /*width: auto !important;*/
     display: inline !important; }
 
 .carousel-control.right, .carousel-control.left {
@@ -154,7 +155,7 @@ div.icon-links {
   border: 0;
   font-size: 14px !important;
   line-height: 1.42857143 !important;
-  letter-spacing: 4px;
+  letter-spacing: 1px;
   border-radius: 0;
   font-family: Zurich, sans-serif;
   font-weight: 1000; }

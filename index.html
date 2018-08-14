@@ -2,23 +2,20 @@
 <html lang="en">
 
 <head>
-    <!-- Theme Made By www.w3schools.com - No Copyright -->
-    <title>Lukas Bühler </title>
+    <title>Lukas Bühler</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+   
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Zurich" rel="stylesheet" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-        crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 </head>
 
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<body id="index" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-    <nav class="navbar navbar-default navbar-fixed-top shadow">
+    <nav id="navbar" class="navbar navbar-default navbar-fixed-top shadow">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -26,26 +23,26 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#myPage" class="img-circle">
+                <a class="navbar-brand" href="#welcome">
                     <img src="resources/images/lukas_buehler_portrait.png" class="img-circle" style="width: 40px; margin: -10px; margin-right: 10px; float: left;">
-                    <span class="hidden-xs hidden-sm">Lukas Bühler</span>
-                    <span class="hidden-lg hidden-md hidden-xs">LB</span>
-                    <span class="hidden-lg hidden-md hidden-sm">L. Bühler</span>
+                    <span class="hidden-xs hidden-sm i18n-name-full"></span>
+                    <span class="hidden-lg hidden-md hidden-xs i18n-name-initials"></span>
+                    <span class="hidden-lg hidden-md hidden-sm i18n-name-short"></span>
                 </a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#about">About Me</a>
+                        <a href="#about-me" class="i18n i18n-general-navbar-about_me"></a>
                     </li>
                     <li>
-                        <a href="#development">Development</a>
+                        <a href="#development" class="i18n i18n-general-navbar-development"></a>
                     </li>
                     <li>
-                        <a href="#social-media">Social Media</a>
+                        <a href="#social-media" class="i18n i18n-general-navbar-social_media"></a>
                     </li>
                     <li>
-                        <a href="#contact">Contact</a>
+                        <a href="#contact" class="i18n i18n-general-navbar-contact"></a>
                     </li>
                 </ul>
             </div>
@@ -55,42 +52,35 @@
     <!-- Welcome container  -->
     <div id="welcome" class="jumbotron text-center">
         <img src="resources/images/lukas_buehler_portrait.png" class="img-circle" style="width: 80%; max-width: 250px;">
-        <h1 class="name">Lukas Bühler</h1>
-        <p class="intro">Welcome to my website.</p>
+        <h1 class="i18n i18n-general-name-full"></h1>
+        <p class="i18n i18n-page-welcome-intro"></p>
     </div>
 
     <!-- Spotlight container -->
     <div id="spotlight" class="container-fluid text-center bg-grey">
-        <h2 class>Spotlight</h2>
-        <div class="row text-center">
-            <div class="col-sm-4 cardslot">
-                <div class="card-view shadow">
-                    <img src="resources/images/hudis_logo.png" alt="Hudis?" class="ios-app-icon">
-                    <h4>
-                        <strong>Hudis</strong> (iOS App)
-                    </h4>
-                    <p>Get to know who's calling you.</p>
-                    <p>In development</p>
-                </div>
+        <h2 class="i18n i18n-page-spotlight-title"></h2>
+        <div class="row text-center card-row">
+            <div class="large-icons">
+                    <i class="fa fa-spinner fa-spin fa-large text-center"></i>
             </div>
             <div class="col-sm-4 cardslot">
-                <div class="card-view shadow">
-                    <img src="" alt="Insta">
-                    <p>
-                        <strong>Random Insta post </strong>
-                    </p>
-                    <p>My insta.</p>
-                </div>
+                <!-- card 1 goes here -->
+            </div>
+            <div class="col-sm-4 cardslot">
+                <!-- card 2 goes here -->
+            </div>
+            <div class="col-sm-4 cardslot">
+                <!-- card 3 goes here -->
             </div>
         </div>
         <br>
     </div>
 
     <!-- About me container -->
-    <div id="about" class="container-fluid">
+    <div id="about-me" class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
-                <h2>About Me</h2>
+                <h2 class="i18n i18n-page-about_me-title"></h2>
             </div>
         </div>
         <div class="row">
@@ -98,19 +88,9 @@
                 <img src="resources/images/lukas_buehler_hocke_nuerburgring_2017.jpg" alt="Nürburgring 2017" class="snapshot shadow">
             </div>
             <div class="col-sm-8">
-                <h4 class="intro">
-                    My name is Lukas Bühler, I was born and raised in Switzerland and I'm currently
-                    <span class="people age lukas"></span> years old.</h4>
+                <h4 class="i18n i18n-page-about_me-intro"></h4>
                 <br>
-                <p>
-                    At the moment I am working as a trainee software developer at
-                    <a href="https://belsoft-collaboration.ch/">Belsoft Collaboration AG</a> in Zürich.
-                    <br> But I am not only a fulltime developer at work, I also work on multiple projects in my freetime. Check
-                    it out in the
-                    <a class="scrollSmooth" href="#development">development section</a>.
-                    <br> Besides being a developer I am also a ski coach for the
-                    <a href="http://www.scbeverin.ch">Ski Club Beverin</a> in Graubünden.
-                </p>
+                <p class="i18n i18c-html i18n-page-about_me-text1"></p>
                 <br>
             </div>
         </div>
@@ -118,12 +98,8 @@
         <div class="row">
             <div class="col-sm-8">
 
-                <h4>
-                    Skiing has always been a big passion for me and I probably couldn't do without it.
-                </h4>
-                <p>
-                    Words.
-                </p>
+                <h4 class="i18n i18n-page-about_me-phrase"></h4>
+                <p class="i18n i18n-page-about_me-text2"></p>
                 <br>
             </div>
             <div class="col-sm-4">
@@ -133,7 +109,7 @@
         <br>
         <div class="row">
             <div class="col-sm-12">
-                <button class="btn btn-ms btn-main">Read more</button>
+                <button class="btn btn-ms btn-main i18n i18n-general-button-read_more"></button>
             </div>
         </div>
     </div>
@@ -141,28 +117,19 @@
 
     <!-- Development container -->
     <div id="development" class="container-fluid text-center bg-grey">
-        <h2>Development</h2>
+        <h2 class="i18n i18n-page-development-title"></h2>
         <br>
-        <h3 style="margin-bottom: 25px;">My projects</h3>
-        <div class="row text-center">
+        <h3 style="margin-bottom: 25px;" class="i18n i18n-page-development-my_projects"></h3>
+        <div class="row text-center card-row">
             <div class="col-sm-4">
-                <div class="card-view shadow">
-                    <img src="resources/images/hudis_logo.png" alt="Hudis" class="ios-app-icon">
-                    <h4>
-                        <strong>Hudis?</strong> (iOS App)
-                    </h4>
-                    <p>Get to know who's calling you.</p>
-                    <p>
-                        <b>In development</b>
-                    </p>
-                </div>
+                <!-- Card here TODO -->
             </div>
             <!-- Add more cards here -->
         </div>
         <div class="row">
-            <h3>Links</h3>
-            <div class="icon-links">
-                <a href="https://github.com/Luky66/">
+            <h3 class="dev-links"></h3>
+            <div class="large-icons">
+                <a href="https://github.com/lukasbuehler/">
                     <i class="fa fa-github"></i>
                 </a>
                 <a href="https://stackoverflow.com/users/9045906/lukas?tab=profile">
@@ -178,7 +145,7 @@
 
     <!-- social media container -->
     <div id="social-media" class="container-fluid">
-        <h2>Social Media</h2>
+        <h2 class="i18n i18n-page-social_media-title"></h2>
         <div class="row">
             <div class="col-sm-6" style="padding-left: 5%; padding-right: 5%;">
                 <div class="social-media-box">
@@ -213,45 +180,38 @@
 
     <!-- Contact container -->
     <div id="contact" class="container-fluid bg-grey">
-        <h2 class="text-center">CONTACT</h2>
+        <h2 class="text-center i18n i18n-page-contact-title"></h2>
         <div class="row">
-            <p>Feel free to contact me via E-Mail or this contact form.</p>
+            <p class="i18n i18n-page-contact-text"></p>
             <p>
-                I'll get back to you as fast as I can.
                 <br/>
                 <a href="mailto:mail@lukasbuehler.ch" title="Send an E-Mail">
                     <span class="glyphicon glyphicon-envelope"></span>
                     mail@lukasbuehler.ch
                 </a>
             </p>
-            <p>
-                You may also send me packages for free via the Swiss military Feldpost.
-                <br/>
-                <a href="mailto:mail@lukasbuehler.ch" title="Send an E-Mail">
-                    <span class="fa fa-package"></span>
-                    How to send me packages during my military service.
-                </a>
-            </p>
         </div>
     </div>
 
     <!-- footer -->
-    <footer class="container-fluid text-center">
-        <a href="#myPage" title="To Top">
+    <footer id="footer" class="container-fluid text-center">
+        <a href="#welcome" title="To Top">
             <span class="glyphicon glyphicon-chevron-up"></span>
-            <p>Back to the top</p>
+            <p class="i18n i18n-general-footer-back_to_top"></p>
         </a>
-        <p>
-            made by Lukas Bühler
-        </p>
+        <p class="i18n i18n-general-footer-made_by"></p>
     </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!-- my scripts -->
+    <script src="bundle.js"></script>
 
     <!-- Twitter widget -->
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-    <!-- my scripts -->
-    <script src="bundle.js"></script>
-
+    
 </body>
 
 </html>
